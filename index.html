@@ -50,7 +50,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2rem 2rem 0.5rem 2rem;
+        padding: 2rem 2rem 0.75rem 2rem;
         border-right: 1px solid black;
         overflow: auto;
     }
@@ -83,6 +83,27 @@
         align-items: flex-end;
         display: flex;
     }
+    a:link, a:visited, a:active {
+        color: black;
+        text-decoration: none;
+        position: relative;
+    }
+    a:hover::after {
+        opacity: 1;
+    }
+    a:after {
+        content: "";
+        height: 5px;
+        position: absolute;
+        width: 100%;
+        display: block;
+        background: #5393de;
+        left: 0;
+        right: 0;
+        bottom: 1px;
+        opacity: .4;
+        transition: all .2s ease-in-out;
+    }
     @media screen and (max-width: 728px){
         .main {
             flex-direction: column;
@@ -114,7 +135,7 @@
                 <p>We grow companies with modern digital methods.</p>
             </div>
             <div class="footer">
-                <span>2021 - FI31760459 - A Hot Company Oy</span>
+                <span>2021 - <a href="https://www.finder.fi/Liikkeenjohdon+konsultointi/A+Hot+Company+Oy/Vaasa/yhteystiedot/3549192" target="_blank">FI31760459</a></span> - A Hot Company Oy</span>
             </div>
         </div>
         <div class="image">
