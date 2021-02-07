@@ -90,6 +90,35 @@
     a:hover:after {
         opacity: 1;
     }
+
+    body {
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .radial-ball {
+        background: radial-gradient(#bfe03991,transparent 70%);
+        height: 600px;
+        width: 600px;
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .radial-ball.ball-2 {
+        background: radial-gradient(#b464e680,transparent 70%);
+        left: 50%;
+        top: 20%;
+    }
+    .logo {
+        z-index: 999;
+    }
     @media screen and (max-width: 768px){
         .logo img {
             max-width: 80vw;
@@ -105,6 +134,8 @@
 </head>
 <body>
     <header>
+        <div class="radial-ball"></div>
+        <div class="radial-ball ball-2"></div>
         <div class="logo">
             <img src="assets/logo.svg" class="logo" alt="A Hot Company Oy">
             <div class="row">
