@@ -34,6 +34,8 @@
         align-items: flex-end;
         padding-bottom: 4rem;
         border-bottom: 3px solid black;
+        max-width: 100%;
+        overflow: hidden;
     }
     footer {
         width: 95%;
@@ -119,6 +121,12 @@
     .logo {
         z-index: 999;
     }
+    .backgrounds {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
     @media screen and (max-width: 768px){
         .logo img {
             max-width: 80vw;
@@ -133,9 +141,12 @@
     </style>
 </head>
 <body>
-    <header>
+    <div class="backgrounds">
         <div class="radial-ball"></div>
         <div class="radial-ball ball-2"></div>
+    </div>
+    <header>
+       
         <div class="logo">
             <img src="assets/logo.svg" class="logo" alt="A Hot Company Oy">
             <div class="row">
